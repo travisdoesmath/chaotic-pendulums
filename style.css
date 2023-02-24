@@ -1,0 +1,55 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin: 0 auto 4em auto;
+    tab-size: 2;
+    -webkit-text-size-adjust: none;
+}
+
+.column {
+    max-width: 960px;
+    position: relative;
+    display: block;
+    margin: 1rem auto;
+    padding: 0 10px;
+}
+
+h1 {
+    font-size: 46px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    margin: 0.1em 0;
+}
+
+h2 {
+    margin-top: 2em;
+}
+  
+h1, h2 {
+    text-rendering: optimizeLegibility;
+}
+
+.shaft {
+    stroke-width: 2px;
+}
+
+.container {
+    height: 500px;
+}
+
+svg {
+    position: absolute;
+    border: 1px solid #CCC;
+}
+
+canvas {
+    position: absolute;
+    
+}
+
+figcaption {
+    color: #444;
+    font-size: 1rem;
+    font-style: italic;
+}

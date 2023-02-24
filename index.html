@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaotic Pendulums</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/7.6.0/math.min.js"></script>
+</head>
+<body>
+    <div class="column">
+        <h1>Chaotic Pendulums</h1>
+        <p>This page is an archive of blocks that used to be hosted on bl.ocks.org, which appears to have silently shut down in late 2022.</p>
+        <div id="double">
+            <h2>Double Pendulums</h2>
+            <p>This is the one that started it all. I saw a <a href="https://www.reddit.com/r/mathpics/comments/4nd5h1/41_triple_pendulums_with_very_slightly_different/">wonderful gif on reddit</a> 
+                of 41 triple pendulums with very slightly different initial conditions. Gifs are nice, but interactive animations are better. So I took a crack at modeling a double pendulum, because, 
+                frankly, the equations for triple pendulums are less-than-pleasant.
+            </p>
+            <div class="container">
+                <canvas width="960" height="500"></canvas>
+                <svg width="960" height="500"></svg>
+                    
+            </div>
+            <button class="play">Pause</button> <span><figcaption>Click on the canvas to restart the simulation from a different position</figcaption></span>
+            <p>For this system, I used the Hamiltonion formulation, and coded a 4-th order Runge-Kutta solver. What I love about this visualization is that the impact of seeing all of the different 
+                pendulums explode into chaos is fundamentally linked to what makes this <i>mathematically</i> chaotic&mdash;specifically, that chaotic systems have "sensitive dependence to intial conditions".
+                Put simply, that means that no matter how close you start out, even the slightest difference will eventually lead to drastically different outcomes.
+            </p>
+        </div>
+        <div id="triple">
+            <h2>Triple Pendulums</h2>
+            <p>Because the gif that inspired me to start this was a triple pendulum, I kept coming back to the double pendulum I had created and tried to get it working for a triple pendulum. 
+                Repeatedly, I would fight with the mess of equations, attempt to code them up, and create some horribly glitchy mess because of a misplaced parentheses. I came across <a href="https://diego.assencio.com/?index=1500c66ae7ab27bb0106467c68feebc6">this blog post by Diego Assencio</a>,
+                which was very helpful. 
+
+            </p>
+            <div class="container">
+                <canvas width="960" height="500"></canvas>
+                <svg width="960" height="500"></svg>    
+                
+            </div>
+            <button class="play">Play</button>  <span><figcaption>Press play to start the simulation. Click on the canvas to restart the simulation from a different position</figcaption></span>  
+        </div>
+        <div id="tuple">
+            <h2><i>n</i>-Tuple Pendulums</h2>
+            <p>Funnily enough, the breakthrough that helped me figure out the triple pendulum case was to give up on trying to figure out the specific triple pendulum case, and instead tackle
+                the general <i>n</i>-tuple pendulum case, and then just set <i>n</i> equal to 3. Inspired by Diego's blog post, I created my own 
+                <a href="https://travisdoesmath.github.io/pendulum-explainer/">explainer for the <i>n</i>-tuple pendulum simulator</a>.
+            </p>
+            <div class="container">
+                <canvas width="960" height="500"></canvas>
+                <svg width="960" height="500"></svg>    
+                
+            </div>
+            <button class="play">Play</button> <span><figcaption>Press play to start the simulation. Click on the canvas to restart the simulation from a different position</figcaption></span>   
+        </div>
+    </div>
+    <script src="pendulum.js"></script>
+    <script src="double-pendulum-app.js"></script>
+    <script src="triple-pendulum-app.js"></script>
+    <script src="tuple-pendulum-app.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

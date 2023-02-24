@@ -1,0 +1,3 @@
+triplePendulumApp();
+doublePendulumApp();
+tuplePendulumApp();
